@@ -16,25 +16,82 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="39" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-ZJ-2sH">
-                                <rect key="frame" x="16" y="81" width="361" height="90.333333333333314"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="yl4-ZJ-2sH">
+                                <rect key="frame" x="16" y="80.999999999999972" width="361" height="480.33333333333326"/>
                                 <subviews>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="0VP-rJ-0G6">
-                                        <rect key="frame" x="0.0" y="0.0" width="361" height="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="361" height="35.333333333333336"/>
                                         <segments>
-                                            <segment title="First"/>
-                                            <segment title="Second"/>
+                                            <segment title="" image="1.circle" catalog="system"/>
+                                            <segment title="" image="2.circle" catalog="system"/>
                                         </segments>
                                         <connections>
                                             <action selector="changeSigment" destination="BYZ-38-t0r" eventType="valueChanged" id="Drv-T5-NmL"/>
                                         </connections>
                                     </segmentedControl>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xYb-fW-559">
-                                        <rect key="frame" x="0.0" y="70" width="361" height="20.333333333333329"/>
+                                        <rect key="frame" x="0.0" y="74.333333333333343" width="361" height="34.333333333333343"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="2Vr-E7-1oN">
+                                        <rect key="frame" x="-2" y="148.66666666666666" width="365" height="35.333333333333343"/>
+                                        <connections>
+                                            <action selector="setSlider" destination="BYZ-38-t0r" eventType="valueChanged" id="Mxl-AX-DfU"/>
+                                        </connections>
+                                    </slider>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dgM-mN-DNd">
+                                        <rect key="frame" x="0.0" y="223" width="361" height="34.333333333333314"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocorrectionType="yes" returnKeyType="done"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rDd-Q5-OmV">
+                                        <rect key="frame" x="0.0" y="297.33333333333331" width="361" height="34.333333333333314"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Done">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <buttonConfiguration key="configuration" style="plain" title="Done">
+                                            <fontDescription key="titleFontDescription" type="boldSystem" pointSize="17"/>
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="10"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="pressedButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="sqW-oZ-Eqp"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="pE5-JN-Y1o">
+                                        <rect key="frame" x="0.0" y="371.66666666666669" width="361" height="34.333333333333314"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hide Date and Time!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTa-nb-psr">
+                                                <rect key="frame" x="0.0" y="0.0" width="298" height="34.333333333333336"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Ppr-F6-I6s">
+                                                <rect key="frame" x="312" y="0.0" width="51" height="34.333333333333336"/>
+                                                <color key="onTintColor" systemColor="systemGreenColor"/>
+                                                <color key="thumbTintColor" systemColor="systemRedColor"/>
+                                                <connections>
+                                                    <action selector="hideDataPicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="NnI-qL-8MH"/>
+                                                </connections>
+                                            </switch>
+                                        </subviews>
+                                    </stackView>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="iWC-fI-XM8">
+                                        <rect key="frame" x="0.0" y="446" width="361" height="34.333333333333314"/>
+                                        <connections>
+                                            <action selector="chooseData" destination="BYZ-38-t0r" eventType="valueChanged" id="sfI-Fi-sFC"/>
+                                        </connections>
+                                    </datePicker>
                                 </subviews>
                             </stackView>
                         </subviews>
@@ -47,18 +104,30 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="dataPicker" destination="iWC-fI-XM8" id="PvE-Cn-j3u"/>
+                        <outlet property="mainSlider" destination="2Vr-E7-1oN" id="SOS-vH-ecY"/>
+                        <outlet property="mainTextField" destination="dgM-mN-DNd" id="gZ7-46-SWP"/>
                         <outlet property="mainTextLabel" destination="xYb-fW-559" id="CFm-V9-4Ec"/>
                         <outlet property="segmentedCNR" destination="0VP-rJ-0G6" id="dOw-El-qQI"/>
+                        <outlet property="textLabel" destination="KTa-nb-psr" id="AOj-eR-EJf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="131" y="-27"/>
+            <point key="canvasLocation" x="-411.4503816793893" y="-73.239436619718319"/>
         </scene>
     </scenes>
     <resources>
+        <image name="1.circle" catalog="system" width="128" height="123"/>
+        <image name="2.circle" catalog="system" width="128" height="123"/>
         <systemColor name="systemCyanColor">
             <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
